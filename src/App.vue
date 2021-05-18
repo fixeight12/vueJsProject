@@ -44,7 +44,7 @@
 h1,h3 {
   color : #0679bb;
   border : none;
-  margin: 10px auto auto;
+  margin: 5px auto auto;
 }
  .content {
     display: inline-block;
