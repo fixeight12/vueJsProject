@@ -1,6 +1,6 @@
 <template>
   <h1 class="mb-4"> {{title}} </h1>
-  <h4 class="title"> Projet réalisé en 2 jours</h4>
+  <h4 class="title"> Projet réalisé en 2 jours !</h4>
   <div class="content">
     <List>
       <div class="list" v-for="step in steps" :key="step">
