@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
     <router-link :to="{name : 'ToDoList'}">To Do List</router-link> |
-    <router-link :to="{name : 'LearningList'}">Learning List</router-link>
+    <router-link :to="{name : 'LearningList'}">Learning List</router-link> |
+    <router-link :to="{name : 'ReactTimeGame'}">React Time Game</router-link>
   </div>
   <router-view/>
 </template>
