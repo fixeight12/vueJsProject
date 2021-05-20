@@ -11,9 +11,9 @@
         <div class="result">
             <Results/>
         </div>
-        <div class="blockGame" v-if="isPlaying">
-            <Block v-bind:delay='delay' v-bind:isPlaying="isPlaying"/>
-        </div>
+
+        <Block v-bind:delay='delay' v-if="isPlaying"/>
+
 
     </div>
 </template>
@@ -35,7 +35,7 @@ export default {
     },
     methods : {
         startGame () {
-            this.delay = 1000 + Math.random() * 2000; // Entre 2 et 5 secondes
+            this.delay = 2000 + Math.random() * 5000; // Entre 2 et 5 secondes
             this.isPlaying = true;
         }
     },

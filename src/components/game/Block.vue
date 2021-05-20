@@ -1,9 +1,9 @@
 <template>
-  <div class="block" v-if="display"  v-on:load ="displayBlock" >
+<p>{{display}} // {{delay}}</p>
+  <div class="block" v-if="display"  >
       Clique !
       {{delay}}
-      {{roundedDelay}}
-      {{isPlaying}}
+      {{display}}
   </div>
 </template>
 
@@ -11,23 +11,23 @@
 export default {
     props : [
         'delay',
-        'isPlaying'
     ],
     data () {
         return {
-            roundedDelay : Math.round(this.delay),
-            display : true,
+            display : false,
 
         }
     },
-    methods : {
-        displayBlock () {
-            setTimeout (function () {
-                //this.display = true;
-                console.log("HELLLLLLLLLOOOOOOOO")
-            } , this.roundedDelay);
+    methods : {    },
 
-        }
+    mounted () {
+        console.log("component mounted");
+        setTimeout ( () => {
+            this.display = true;
+        }, this.delay);
+    },
+    updated () {
+        console.log("updated !")
     }
 
 }
